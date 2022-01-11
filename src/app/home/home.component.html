@@ -1,9 +1,89 @@
 <div class="background">
   <app-navbar></app-navbar>
-  <div class="row d-flex justify-content-center">
-    <div class="col-10 d-flex justify-content-center">
-      <app-carousel [slides]="slides"></app-carousel>
+  <div id="row1" class="row justify-content-center animate__animated">
+    <app-carousel [slides]="slides"></app-carousel>
+    <div class="col-12 col-md-4 d-flex justify-content-end align-items-center ">
+      <div class="scene">
+        <div class="card row-1-card" style="margin-left: 7px;">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 14.5%;">RESIDENTIAL</p>
+            <img src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641151254/Tree%20Company/126463821_192135312404762_4113117318561997840_n_ccexpress_c8twwh.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">We service residential properties and provide various forms of safety to ensure everyone is safe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+      <div class="scene">
+        <div class="card row-1-card">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 22%;">CLIMBING</p>
+            <img style="height: 400px;" src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641151049/Tree%20Company/117327050_157242766003308_6505868896464697417_n_ccexpress_1_cbwxat.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">Climb trees to safely and efficiently trim trees so they can be chopped down.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-start align-items-center">
+      <div class="scene">
+        <div class="card row-1-card">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 13%;">CRANE WORK</p>
+            <img src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641232400/Tree%20Company/263156782_595078041547179_7500153259921315964_n_ccexpress_osuudr.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">The crane helps us remove tree waste faster and more efficient.</p>
+          </div>
+        </div>
+      </div>
+      <button (click)="onRightArrowClick()" class="arrow-right"><i class="fa fa-arrow-right"></i></button>
+    </div>
+
+  </div>
+  <div id="row2" class="row justify-content-center hidden animate__animated">
+    <div class="col-12 col-md-4 d-flex justify-content-end align-items-center">
+      <button (click)="onLeftArrowClick()" class="arrow-left"><i class="fa fa-arrow-left"></i></button>
+      <div class="scene">
+        <div class="card row-2-card">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 9.5%;">BUCKET TRUCK</p>
+            <img src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641309757/Tree%20Company/264193504_292509526220438_4828797239194064197_n_ccexpress_n3pnag.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">We have a bucket truck to get at high altitudes to trim trees down.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center ">
+      <div class="scene">
+        <div class="card row-2-card">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 10.5%;">LOT CLEARING</p>
+            <img src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641309880/Tree%20Company/268312910_1376241812808377_8028347432798964292_n_ccexpress_esbfo3.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">We clear land from trees to tree stumps, the land will be bare by the time we are done with it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 d-flex justify-content-start align-items-center">
+      <div class="scene">
+        <div class="card row-2-card">
+          <div class="card__face card__face--front">
+            <p class="card-title" style="left: 12%;">STORM WORK</p>
+            <img src="https://res.cloudinary.com/walterscloudinary/image/upload/v1641309960/Tree%20Company/260324490_193836039511777_8029127160758882076_n_ccexpress_r71op7.jpg" alt="">
+          </div>
+          <div class="card__face card__face--back">
+            <p class="card-back-para">Stroms happen and trees fall where you dont want them. Please reach out to us and we'll come out and fix the problem.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>

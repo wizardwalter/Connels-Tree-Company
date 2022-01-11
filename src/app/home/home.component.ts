@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'animate.css';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,37 @@ export class HomeComponent implements OnInit {
   ];
 
   ngOnInit(): void {
+     var card = document.querySelectorAll('.card');
+     card.forEach(card => card.addEventListener('click', () =>{  card.classList.toggle('is-flipped')}));
+  };
+  onRightArrowClick(){
+    document.getElementById("row1").classList.add('animate__lightSpeedOutLeft')
+    setTimeout(()=>{
+      document.getElementById("row1").classList.add('hidden')
+      document.getElementById("row2").classList.remove('hidden')
+  }, 1000)
+
+    document.getElementById("row2").classList.add('animate__lightSpeedInRight')
+    setTimeout(()=>{
+      document.getElementById("row1").classList.remove('animate__lightSpeedOutLeft')
+    },1200)
+
+
+  }
+  onLeftArrowClick(){
+    document.getElementById("row2").classList.add('animate__lightSpeedOutRight')
+    setTimeout(()=>{
+      document.getElementById("row2").classList.add('hidden')
+      document.getElementById("row1").classList.remove('hidden')
+  }, 1000)
+
+    document.getElementById("row1").classList.add('animate__lightSpeedInLeft')
+    setTimeout(()=>{
+      document.getElementById("row2").classList.remove('animate__lightSpeedOutRight')
+    },1200)
+
+
   }
 
-}
+  }
+
