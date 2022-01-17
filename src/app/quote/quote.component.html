@@ -1,0 +1,43 @@
+<div class="background">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+
+      <div *ngIf="status" class="row col-12">
+        <h2>{{status}}</h2>
+      </div>
+
+      <label for="first-name">First Name: </label>
+      <input id="first-name" type="text" formControlName="firstName">
+
+      <label for="last-name">Last Name: </label>
+      <input id="last-name" type="text" formControlName="lastName">
+
+      <label for="last-name">Email: </label>
+      <input id="last-name" type="email" formControlName="email">
+
+      <label for="last-name">Address: </label>
+      <input id="last-name" type="text" formControlName="address">
+
+      <label for="last-name">City: </label>
+      <input id="last-name" type="text" formControlName="city">
+
+      <label for="last-name">Phone Number: </label>
+      <input id="last-name" type="text" formControlName="phoneNumber">
+
+      <label for="last-name">Type of Work: </label>
+      <select formControlName="typeWork" class="form-control">
+        <option>Tree Trim</option>
+        <option>Tree Removal</option>
+        <option>Lot Clearing</option>
+        <option>Storm Clean Up</option>
+    </select>
+
+
+      <label for="last-name">Comments: </label>
+      <input id="last-name" type="textarea" formControlName="comments">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
